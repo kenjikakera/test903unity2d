@@ -4,6 +4,10 @@
 外部アセットjoystick control pack使用。
 PCではXINPUTのジョイスティックでも遊べます。
 
+完全版は、
+https://www.edge-bp.com/test/test903.zip
+にアップしてあります。
+
 物理joystickでは
 Aボタンはアクション、Bボタンはアイテムを使用します。
 
