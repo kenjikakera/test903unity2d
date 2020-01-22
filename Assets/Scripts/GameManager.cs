@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using static ParamaterList;
+
 
 public class GameManager : MonoBehaviour
 
 {
-    public float life = 100;
-    public float maxLife = 100;
-    public float attack = 100;
-    public float deffence = 100;
+    public float life = initPlayerLife;
+    public float maxLife = initPlayerLife;
+    public float attack = powShortsword;
+    public float deffence = defLightamer;
     public float attackExp = 1;
     public float deffenceExp = 1;
     public int score = 0;

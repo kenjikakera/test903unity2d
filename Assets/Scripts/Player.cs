@@ -6,14 +6,14 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 using static EnumList;
+using static ParamaterList;
+
 
 
 public class Player : MonoBehaviour
 {
     
     public VariableJoystick variableJoystick;
-    public float vJoy = 50;
-    public float rJoy = 70;
     public Rigidbody2D rd;
     public GameObject[] button;
     public GameObject goText;
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     private float floatHalf = 0.5f;
     private float minDeffience = 40.0f;
     private Vector2 updownPos;
+
 
 
     void Awake()
@@ -71,8 +72,8 @@ public class Player : MonoBehaviour
 
         setMyItemImage(0, 0);
         setMyItemImage(1, 1);
-        scGM.attack = 100;
-        scGM.deffence = 100;
+        scGM.attack = powShortsword;
+        scGM.deffence = defLightamer;
 
         setButtonImage(0, 0);
         setButtonImage(1, 0);
@@ -202,25 +203,25 @@ public class Player : MonoBehaviour
                     case (int)Items.longsword:
                         partialSub(1, 3.0f);
                         setMyItemImage(0,(int)Items.longsword);
-                        scGM.attack = 125;
+                        scGM.attack = powLongsword;
                         break;
                     // シルバーアーマー
                     case (int)Items.silverarmer:
                         partialSub(1, 3.0f);
                         setMyItemImage(1, (int)Items.silverarmer);
-                        scGM.deffence = 125;
+                        scGM.deffence = defSilveramer;
                         break;
                     //  ファイアーソード
                     case (int)Items.firesowrd:
                         partialSub(1, 3.0f);
                         setMyItemImage(0, (int)Items.firesowrd);
-                        scGM.attack = 150;
+                        scGM.attack = powFiresword;
                         break;
 
                     case (int)Items.firearmer:
                         partialSub(1, 3.0f);
                         setMyItemImage(1, (int)Items.firearmer);
-                        scGM.deffence = 150;
+                        scGM.deffence = defFirerarmer;
                         break;
                 }
                 Instantiate(scCM.mazeItem[6], scMI.pos3D, Quaternion.identity, scCM.goFloor.transform);
